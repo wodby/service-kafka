@@ -1,5 +1,6 @@
 name: kafka
 title: Apache Kafka
+guidance: GUIDANCE.md
 icon: kafka
 type: datastore
 scalable: false
