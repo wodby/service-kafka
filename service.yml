@@ -57,8 +57,11 @@ env:
   value: '1'
 - name: KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS
   value: '0'
+# A subdirectory of the volume: block storage volumes have a lost+found
+# directory in their root, and Kafka refuses to start when its data directory
+# holds a directory that is not a topic partition.
 - name: KAFKA_LOG_DIRS
-  value: /var/lib/kafka/data
+  value: /var/lib/kafka/data/logs
 
 volumes:
 - name: data
