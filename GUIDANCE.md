@@ -21,7 +21,7 @@ Broker settings are environment variables on this service in the image's `KAFKA_
 
 ## Data
 
-Log segments and KRaft metadata are in `/var/lib/kafka/data` (`KAFKA_LOG_DIRS`) on the `data` volume. The manifest declares no backups, imports or actions.
+Log segments and KRaft metadata are in `/var/lib/kafka/data/logs` (`KAFKA_LOG_DIRS`) on the `data` volume, which is mounted at `/var/lib/kafka/data`. The manifest declares no backups, imports or actions.
 
 ## Check the result
 
