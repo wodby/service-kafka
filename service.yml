@@ -148,6 +148,12 @@ workloads:
   containers:
   - name: kafka
     image: apache/kafka
+    resources:
+      request:
+        cpu: 100
+        memory: 176
+      limit:
+        memory: 2048
     helm:
       resources: resources
       env: envVars
